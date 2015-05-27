@@ -13,18 +13,16 @@ if (process.argv[2] && process.argv[2].toLowerCase() == 'b') {
 (function tick(stamp) {
   request.get('http://www.streamtext.net/text-data.ashx?event=JSConf' + track +  '&last=' + stamp + '&language=en')
   .then(function(v) {
-    try {
       v = JSON.parse(v);
+      throw new Error('poop');
       stamp = v.lastPosition;
       if (v.i && v.i.length) {
         process.stdout.write(v.i.map(function(v) {
           return decodeURIComponent(v.d);
         }).join(''));
-    }
-    } catch (e) {
-    } finally {
-      setTimeout(tick.bind({}, stamp), 1000);
-    }
-  });
+      }
+  })
+  .catch(function(){})
+  .finally(setTimeout.bind({}, tick.bind({}, stamp), 1000));
 })(null);
 
