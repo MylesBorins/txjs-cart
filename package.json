@@ -1,0 +1,25 @@
+{
+  "name": "jsconf-2015-stream",
+  "version": "0.1.2",
+  "main": "index.js",
+  "bin": {
+    "jsconf-2015-stream": "./index.js"
+  },
+  "dependencies": {
+    "request-promise": "^0.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samccone/jsconf-2015-stream.git"
+  },
+  "author": "Sam Saccone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samccone/jsconf-2015-stream/issues"
+  },
+  "homepage": "https://github.com/samccone/jsconf-2015-stream"
+}
