@@ -14,7 +14,6 @@ if (process.argv[2] && process.argv[2].toLowerCase() == 'b') {
   request.get('http://www.streamtext.net/text-data.ashx?event=JSConf' + track +  '&last=' + stamp + '&language=en')
   .then(function(v) {
       v = JSON.parse(v);
-      throw new Error('poop');
       stamp = v.lastPosition;
       if (v.i && v.i.length) {
         process.stdout.write(v.i.map(function(v) {
