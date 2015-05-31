@@ -2,6 +2,7 @@
 
 var request = require('request-promise');
 var track = 1;
+var sorryMsg = 'Sorry, nothing to stream for now...';
 
 if (process.argv[2] && process.argv[2].toLowerCase() == 'b') {
   console.log("✨ Streaming track B✨ ");
@@ -21,7 +22,12 @@ if (process.argv[2] && process.argv[2].toLowerCase() == 'b') {
         }).join(''));
       }
   })
-  .catch(function(){})
+  .catch(function(err){
+    if(err.statusCode === 404) {
+      process.stdout.write(sorryMsg);
+      sorryMsg = '.';
+    }
+  })
   .finally(setTimeout.bind({}, tick.bind({}, stamp), 1000));
 })(null);
 
