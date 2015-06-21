@@ -4,15 +4,11 @@ var request = require('request-promise');
 var track = 1;
 var sorryMsg = 'Sorry, nothing to stream for now...';
 
-if (process.argv[2] && process.argv[2].toLowerCase() == 'b') {
-  console.log("✨ Streaming track B✨ ");
-  track = 2;
-} else {
-  console.log("✨ Streaming track A✨ ");
-}
+console.log("✨ Streaming jQuerySF 2015✨ ");
+
 
 (function tick(stamp) {
-  request.get('http://www.streamtext.net/text-data.ashx?event=JSConf' + track +  '&last=' + stamp + '&language=en')
+  request.get('http://www.streamtext.net/text-data.ashx?event=JQSF&last=' + stamp + '&language=en')
   .then(function(v) {
       v = JSON.parse(v);
       stamp = v.lastPosition;
