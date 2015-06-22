@@ -1,6 +1,6 @@
 {
   "name": "jquerySF-2015-stream",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "bin": {
     "jQuerySF-2015-stream": "./index.js"
