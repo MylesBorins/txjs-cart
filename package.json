@@ -1,9 +1,9 @@
 {
-  "name": "jquerysf-2015-stream",
+  "name": "jqsf-cart",
   "version": "1.0.2",
   "main": "index.js",
   "bin": {
-    "jQuerySF-2015-stream": "./index.js"
+    "jqsf": "./index.js"
   },
   "dependencies": {
     "request-promise": "^0.4.2"
