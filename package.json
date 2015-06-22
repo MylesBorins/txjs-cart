@@ -1,6 +1,6 @@
 {
   "name": "jqsf-cart",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "main": "index.js",
   "bin": {
     "jqsf": "./index.js"
