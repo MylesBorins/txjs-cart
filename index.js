@@ -6,12 +6,13 @@ var sorryMsg = 'Sorry, nothing to stream for now...';
 
 console.log("✨ Streaming jQuerySF 2015✨ ");
 
+var last = null;
 
-(function tick(stamp) {
-  request.get('http://www.streamtext.net/text-data.ashx?event=JQSF&last=' + stamp + '&language=en')
+(function tick() {
+  request.get('http://www.streamtext.net/text-data.ashx?event=JQSF&last=' + last + '&language=en')
   .then(function(v) {
       v = JSON.parse(v);
-      stamp = v.lastPosition;
+      last = v.lastPosition;
       if (v.i && v.i.length) {
         process.stdout.write(v.i.map(function(v) {
           return decodeURIComponent(v.d);
@@ -24,6 +25,6 @@ console.log("✨ Streaming jQuerySF 2015✨ ");
       sorryMsg = '.';
     }
   })
-  .finally(setTimeout.bind({}, tick.bind({}, stamp), 1000));
+  .finally(setTimeout.bind({}, tick, 1000));
 })(null);
 
