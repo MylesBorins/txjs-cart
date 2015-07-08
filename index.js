@@ -4,12 +4,12 @@ var request = require('request-promise');
 var track = 1;
 var sorryMsg = 'Sorry, nothing to stream for now...';
 
-console.log("✨ Streaming jQuerySF 2015✨ ");
+console.log("✨ Streaming Cascadiafest 2015✨ ");
 
 var last = null;
 
 (function tick() {
-  request.get('http://www.streamtext.net/text-data.ashx?event=JQSF&last=' + last + '&language=en')
+  request.get('http://www.streamtext.net/text-data.ashx?event=CascadiaFest2015&last=' + last + '&language=en')
   .then(function(v) {
       v = JSON.parse(v);
       last = v.lastPosition;

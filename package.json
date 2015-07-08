@@ -1,9 +1,9 @@
 {
-  "name": "jqsf-cart",
-  "version": "1.1.0",
+  "name": "cascadiafest-cart",
+  "version": "1.0.0",
   "main": "index.js",
   "bin": {
-    "jqsf": "./index.js"
+    "cascadiafest": "./index.js"
   },
   "dependencies": {
     "request-promise": "^0.4.2"
@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jQuerySF/jquerysf-stream.git"
+    "url": "https://github.com/thealphanerd/cascadiafest-cart.git"
   },
   "author": "Sam Saccone",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jQuerySF/jquerysf-stream/issues"
+    "url": "https://github.com/thealphanerd/cascadiafest-cart/issues"
   },
-  "homepage": "http://jquerysf.com"
+  "homepage": "http://2015.cascadiafest.com"
 }
