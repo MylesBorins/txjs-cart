@@ -1,9 +1,9 @@
 {
-  "name": "cascadiafest-cart",
-  "version": "1.0.1",
+  "name": "txjs-cart",
+  "version": "1.0.0",
   "main": "index.js",
   "bin": {
-    "cascadiafest": "./index.js"
+    "txjs": "./index.js"
   },
   "dependencies": {
     "request-promise": "^0.4.2"
@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thealphanerd/cascadiafest-cart.git"
+    "url": "https://github.com/thealphanerd/txjs-cart.git"
   },
-  "author": "Sam Saccone",
+  "authors": ["Sam Saccone", "Myles Borins"],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thealphanerd/cascadiafest-cart/issues"
+    "url": "https://github.com/thealphanerd/txjs-cart/issues"
   },
-  "homepage": "http://2015.cascadiafest.com"
+  "homepage": "https://2015.texasjavascript.com/"
 }
